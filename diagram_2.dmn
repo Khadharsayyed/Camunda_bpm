@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="medicine_1" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.18.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.20.0">
+  <decision id="medicine_123" name="Decision 1">
+    <decisionTable id="DecisionTable_12sw35j" hitPolicy="FIRST">
+      <input id="Input_1" label="Medicines" camunda:inputVariable="medicines">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>medicines</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0skp6v0" label="Customer Type">
+        <inputExpression id="LiteralExpression_15oyh6t" typeRef="string">
+          <text>customer</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Price" name="price" typeRef="integer" />
+      <output id="OutputClause_0a0v5e8" label="Checkup charge" name="charge" typeRef="integer" />
+      <rule id="DecisionRule_02ovrne">
+        <inputEntry id="UnaryTests_0qrg5su">
+          <text>"Paracetmol"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lobwqc">
+          <text>"old"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0isk1g5">
+          <text>155</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1icynt3">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_146xarm">
+        <inputEntry id="UnaryTests_13zp0jp">
+          <text>"Paracetmol"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rio58t">
+          <text>"new"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0w5w8vx">
+          <text>155</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nekvq4">
+          <text>300</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ogu59e">
+        <inputEntry id="UnaryTests_1e83fcd">
+          <text>"Dolo 650"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vft85x">
+          <text>"old"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i43gn0">
+          <text>202</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03fe2ky">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cmnk8o">
+        <inputEntry id="UnaryTests_1mb62yl">
+          <text>"Dolo 650"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1113h67">
+          <text>"new"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1eolri0">
+          <text>202</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l3cijp">
+          <text>300</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jr7qhb">
+        <inputEntry id="UnaryTests_1gdmw8r">
+          <text>"Citrizen"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m2xbwd">
+          <text>"old"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03zjqrj">
+          <text>65</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00qx26s">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uct358">
+        <inputEntry id="UnaryTests_0gutxme">
+          <text>"Citrizen"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ivgpzm">
+          <text>"new"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14otr79">
+          <text>65</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h5uxan">
+          <text>300</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0a7p87h">
+        <inputEntry id="UnaryTests_0uy9bgu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tl0pno">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0yxhejd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11dggo7">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="medicine_123">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

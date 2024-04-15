@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "label": "medicines",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1b5onu8",
+        "columns": null
+      },
+      "id": "Field_05kqq83",
+      "key": "medicines"
+    },
+    {
+      "label": "customer",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ufv7v5",
+        "columns": null
+      },
+      "id": "Field_0shwvdi",
+      "key": "customer"
+    }
+  ],
+  "type": "default",
+  "id": "Form_dmn",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.18.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 13
+}

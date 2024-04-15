@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0lzybzv" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.12.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <decision id="Decision_1b33815" name="Decision 1">
+    <decisionTable id="DecisionTable_0ttji8t">
+      <input id="Input_1" label="LoanType">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>loantype</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1y4hkfs" label="Employement Type">
+        <inputExpression id="LiteralExpression_0s4a8y4" typeRef="string">
+          <text>employee</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_13nlp3o" label="Age">
+        <inputExpression id="LiteralExpression_0egciur" typeRef="long">
+          <text>age</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" typeRef="string" />
+      <output id="OutputClause_0uyvjb2" typeRef="string" />
+      <rule id="DecisionRule_19etz7f">
+        <inputEntry id="UnaryTests_0m96g8i">
+          <text>"Home Loan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ywqy45">
+          <text>"salaried"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sav65u">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0aoj8iw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r6f955">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mnuodf">
+        <inputEntry id="UnaryTests_0x7t58y">
+          <text>"Personal Loan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xqyi1q">
+          <text>"self employed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qlsgav">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1h6k62l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1flh92q">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1b33815">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

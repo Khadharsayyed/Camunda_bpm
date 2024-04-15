@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="foodOrder123" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.18.0">
+  <decision id="foodorder" name="Decision 1">
+    <decisionTable id="DecisionTable_0snqvx4">
+      <input id="Input_1" label="MENU" camunda:inputVariable="menu">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>menu</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1p26hc0" label="CUSTOMER TYPE" camunda:inputVariable="customer">
+        <inputExpression id="LiteralExpression_0lsf8ox" typeRef="string">
+          <text>customer</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="PRICE" name="price" typeRef="integer" />
+      <output id="OutputClause_0t9ehee" label="VENDOR OFFER" name="vendoroffer" typeRef="double" />
+      <output id="OutputClause_1ju78sy" label="PRO OFFER" name="prooffer" typeRef="double" />
+      <rule id="DecisionRule_1a07n6t">
+        <inputEntry id="UnaryTests_11keie3">
+          <text>"biryani"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1knbicl">
+          <text>"regular"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hrswdy">
+          <text>300</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o3ovzv">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o40sfo">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17qu1k6">
+        <inputEntry id="UnaryTests_1m7zwnz">
+          <text>"biryani"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y36m8o">
+          <text>"pro"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0v2u2hp">
+          <text>300</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lwh24g">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12d1oxe">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18q329l">
+        <inputEntry id="UnaryTests_0b6ucj2">
+          <text>"biryani"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rf6cso">
+          <text>"guest"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15avzp4">
+          <text>300</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fvh8je">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1flvsvy">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0749oqd">
+        <inputEntry id="UnaryTests_0zwmu7x">
+          <text>"noodles"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v6ou6v">
+          <text>"regular"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ztdapf">
+          <text>150</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10rjpbk">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zievgq">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zsybjv">
+        <inputEntry id="UnaryTests_0jyc0ah">
+          <text>"noodles"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12qzuyj">
+          <text>"pro"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12bv83c">
+          <text>150</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uppgvd">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cj07su">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1v4s8eq">
+        <inputEntry id="UnaryTests_0qaym99">
+          <text>"noodles"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kqscom">
+          <text>"guest"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02kvv38">
+          <text>150</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bgtwvg">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ssi82n">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ushra0">
+        <inputEntry id="UnaryTests_0952bh5">
+          <text>"pasta"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1obrsij">
+          <text>"regular"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_026l6xp">
+          <text>110</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g5lnvd">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vqa78a">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19fevb0">
+        <inputEntry id="UnaryTests_1n0ueg7">
+          <text>"pasta"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ea38aq">
+          <text>"pro"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r3lbuz">
+          <text>110</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kv1vh7">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0teiceb">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12amfxt">
+        <inputEntry id="UnaryTests_1dt1fbo">
+          <text>"pasta"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uwdfvj">
+          <text>"guest"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_009i59y">
+          <text>110</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vk7ytv">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_186yi2l">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pg5pbl">
+        <inputEntry id="UnaryTests_0xkeoef">
+          <text>"pizza"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05ejl4j">
+          <text>"regular"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gugdif">
+          <text>180</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s48roi">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12ykybh">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16p7pxz">
+        <inputEntry id="UnaryTests_17l1p77">
+          <text>"pizza"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dg7750">
+          <text>"pro"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rpmdza">
+          <text>180</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nk7bde">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pub9hj">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rjekqq">
+        <inputEntry id="UnaryTests_09c61ei">
+          <text>"pizza"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jxxieu">
+          <text>"guest"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fxpvlm">
+          <text>180</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bfqsht">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mbxc9p">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nsdxd6">
+        <inputEntry id="UnaryTests_0y5d59q">
+          <text>"juice"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u63j4l">
+          <text>"regular"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d5twtf">
+          <text>50</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i2t4e2">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ln6j7i">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09idqj7">
+        <inputEntry id="UnaryTests_0djh9ch">
+          <text>"juice"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nkoihc">
+          <text>"pro"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04onxcl">
+          <text>50</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oz2xym">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xtimat">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1y3mir9">
+        <inputEntry id="UnaryTests_01d3e3c">
+          <text>"juice"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cmx6o4">
+          <text>"guest"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mwz60k">
+          <text>50</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16gbz4h">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mvzvhm">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_032xpal">
+        <inputEntry id="UnaryTests_1pi0rmy">
+          <text>"milkshake"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1drpavb">
+          <text>"regular"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uy6lr5">
+          <text>100</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ql60vq">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m90jcv">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ez57co">
+        <inputEntry id="UnaryTests_1pr433q">
+          <text>"milkshake"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oc89g0">
+          <text>"pro"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u0so2q">
+          <text>100</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rxi2pq">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c2can8">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lacsdz">
+        <inputEntry id="UnaryTests_1tmzrs1">
+          <text>"milkshake"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t4ati6">
+          <text>"guest"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i2hrsk">
+          <text>100</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1u0vsqh">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05bd7c9">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="foodorder">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

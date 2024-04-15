@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0ho5192" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.18.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.20.0">
+  <bpmn:process id="Process_0kme2z0" name="DMN_SERVICE" isExecutable="true" camunda:historyTimeToLive="180">
+    <bpmn:businessRuleTask id="Activity_14vk6du" name="Medical store" camunda:resultVariable="output" camunda:decisionRef="medicine_123" camunda:mapDecisionResult="singleResult">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="price">
+            <camunda:script scriptFormat="javascript">output.get("price");</camunda:script>
+          </camunda:outputParameter>
+          <camunda:outputParameter name="charge">
+            <camunda:script scriptFormat="javascript">output.get("charge");</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0b7fckc</bpmn:incoming>
+      <bpmn:outgoing>Flow_1wcy37d</bpmn:outgoing>
+    </bpmn:businessRuleTask>
+    <bpmn:startEvent id="Event_0nef5cb">
+      <bpmn:outgoing>Flow_1woh8a7</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1woh8a7" sourceRef="Event_0nef5cb" targetRef="Activity_0dlt8ac" />
+    <bpmn:userTask id="Activity_0dlt8ac" camunda:formRef="Form_dmn" camunda:formRefBinding="latest">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="medicines">
+            <camunda:map>
+              <camunda:entry key="medicines" />
+            </camunda:map>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="customer">
+            <camunda:map>
+              <camunda:entry key="customer" />
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1woh8a7</bpmn:incoming>
+      <bpmn:outgoing>Flow_0b7fckc</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0b7fckc" sourceRef="Activity_0dlt8ac" targetRef="Activity_14vk6du" />
+    <bpmn:sequenceFlow id="Flow_1wcy37d" sourceRef="Activity_14vk6du" targetRef="Activity_0gwcryo" />
+    <bpmn:serviceTask id="Activity_0gwcryo" camunda:class="com.example.workflow.Payment">
+      <bpmn:incoming>Flow_1wcy37d</bpmn:incoming>
+      <bpmn:outgoing>Flow_147f59q</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_1awo71y">
+      <bpmn:incoming>Flow_147f59q</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_147f59q" sourceRef="Activity_0gwcryo" targetRef="Event_1awo71y" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0kme2z0">
+      <bpmndi:BPMNShape id="Event_0nef5cb_di" bpmnElement="Event_0nef5cb">
+        <dc:Bounds x="152" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0tg71v8_di" bpmnElement="Activity_14vk6du">
+        <dc:Bounds x="430" y="60" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0thi4iy_di" bpmnElement="Activity_0dlt8ac">
+        <dc:Bounds x="240" y="60" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1dotr5y_di" bpmnElement="Activity_0gwcryo">
+        <dc:Bounds x="620" y="60" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1awo71y_di" bpmnElement="Event_1awo71y">
+        <dc:Bounds x="812" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1woh8a7_di" bpmnElement="Flow_1woh8a7">
+        <di:waypoint x="188" y="100" />
+        <di:waypoint x="240" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0b7fckc_di" bpmnElement="Flow_0b7fckc">
+        <di:waypoint x="340" y="100" />
+        <di:waypoint x="430" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wcy37d_di" bpmnElement="Flow_1wcy37d">
+        <di:waypoint x="530" y="100" />
+        <di:waypoint x="620" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_147f59q_di" bpmnElement="Flow_147f59q">
+        <di:waypoint x="720" y="100" />
+        <di:waypoint x="812" y="100" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

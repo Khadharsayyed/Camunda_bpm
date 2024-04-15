@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1w3fkuw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.12.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <decision id="Decision_06ii97g" name="Decision 1">
+    <decisionTable id="DecisionTable_1mg0675">
+      <input id="Input_1" label="Sufficient Transaction">
+        <inputExpression id="InputExpression_1" typeRef="boolean">
+          <text>transactionamount&lt;availablebalance</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_09ynpgf" label="Insufficient Transaction">
+        <inputExpression id="LiteralExpression_1bykcsp" typeRef="boolean">
+          <text>transactionamount&gt;availablebalance</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Review" name="amount&#60;100000" typeRef="boolean" />
+      <output id="OutputClause_1o8qjxi" label="Status" name="status" typeRef="boolean" />
+      <rule id="DecisionRule_02d54wg">
+        <inputEntry id="UnaryTests_0klm13j">
+          <text>True</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vgmjsd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16m3g7i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0id9b2m">
+          <text>"Approve"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xig01k">
+        <inputEntry id="UnaryTests_0o055td">
+          <text>False</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nrun8b">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ldurk9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dxj4cv">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hkxfs8">
+        <inputEntry id="UnaryTests_07hzccq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qu1z28">
+          <text>True</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10ro25e">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g46amu">
+          <text>"Reject"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1biwba6">
+        <inputEntry id="UnaryTests_1x6mgsu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05wb533">
+          <text>False</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0outibj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nqmywk">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xvygze">
+        <inputEntry id="UnaryTests_0kv0i5p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ml7k52">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bfmn4j">
+          <text>True</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u57xcq">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dd8pr3">
+        <inputEntry id="UnaryTests_0upvpgp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uq6djz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cvqhtr">
+          <text>False</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19ylc2z">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_06ii97g">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
